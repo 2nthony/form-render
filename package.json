@@ -1,0 +1,76 @@
+{
+  "name": "form-renderer",
+  "description": "Yet another form render solution for vue",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "evillt/form-renderer"
+  },
+  "author": "evillt <ijoec123@gmail.com> (https://evila.me)",
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "main": "dist/form-renderer.cjs.js",
+  "types": "types.d.ts",
+  "scripts": {
+    "lint": "xo",
+    "prepublishOnly": "npm run build",
+    "build": "bili",
+    "example": "npm run build && dvan --config example/dvan.config.js --serve"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@vue/babel-plugin-transform-vue-jsx": "^1.0.0-beta.3",
+    "babel-eslint": "^10.0.1",
+    "bili": "^4.4.0",
+    "dvan": "^2.4.0",
+    "element-ui": "^2.6.3",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-rem": "^4.0.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.0.0-rc.13",
+    "lint-staged": "^7.2.0",
+    "prettier": "^1.15.2",
+    "rollup-plugin-vue": "^4.7.2",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10",
+    "xo": "^0.23.0"
+  },
+  "xo": {
+    "parser": "babel-eslint",
+    "extends": [
+      "rem",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "unicorn/filename-case": false,
+      "no-unused-vars": 1,
+      "new-cap": 1
+    },
+    "ignores": [
+      "example/**"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "xo --fix",
+        "git add"
+      ],
+      "*.{json,md}": [
+        "prettier --write",
+        "git add"
+      ]
+    },
+    "ignore": [
+      "example/**"
+    ]
+  }
+}
