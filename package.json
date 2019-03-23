@@ -16,7 +16,7 @@
   "types": "types.d.ts",
   "scripts": {
     "lint": "xo",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "yarn build",
     "build": "bili",
     "example": "dvan --config example/dvan.config.js --serve"
   },
