@@ -5,8 +5,8 @@ export default {
 
   render(h) {
     const { item, $FormRendererUI } = this
-    const Item = $FormRendererUI.item
-    const Widget = $FormRendererUI[item.type]
+    const Item = $FormRendererUI.item || {}
+    const Widget = $FormRendererUI[item.type] || { component: item.type }
 
     return (
       <Item.component label={item.label}>
