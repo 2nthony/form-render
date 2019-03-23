@@ -5,15 +5,17 @@ export default {
   name: 'FormRenderer',
 
   render(h) {
-    const { $FormRendererUI } = this
-    const { props, items } = this.config
-    const Form = $FormRendererUI.form
+    const {
+      $FormRendererUI: { form: Form }
+    } = this
+    const { props, items = [] } = this.config
 
     return (
       <Form.component {...{ props }}>
         {items.map(item => {
           return <Item item={item} />
         })}
+        {this.$slots.default}
       </Form.component>
     )
   },
