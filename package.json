@@ -18,7 +18,7 @@
     "lint": "xo",
     "prepublishOnly": "npm run build",
     "build": "bili",
-    "example": "npm run build && dvan --config example/dvan.config.js --serve"
+    "example": "dvan --config example/dvan.config.js --serve"
   },
   "dependencies": {},
   "devDependencies": {
@@ -35,6 +35,8 @@
     "prettier": "^1.15.2",
     "rollup-plugin-vue": "^4.7.2",
     "vue": "^2.6.10",
+    "vue-auto-routes": "^1.4.0",
+    "vue-router": "^3.0.2",
     "vue-template-compiler": "^2.6.10",
     "xo": "^0.23.0"
   },
