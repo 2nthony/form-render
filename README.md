@@ -21,6 +21,34 @@ yarn build
 yarn example
 ```
 
+## Config type check
+
+FormRenderer expose the `Config` type you can use to type-check your form config:
+
+```ts
+// form-config.ts
+import { Config } from 'form-renderer'
+
+const config: Config = {
+  props: {},
+  items: [...]
+}
+
+export default config
+```
+
+It also works in `.js` file:
+
+```js
+/** @type {import('form-renderer').Config} */
+const config = {
+  props: {},
+  items: [...]
+}
+
+export default config
+```
+
 ## Contributing
 
 1. Fork it!
