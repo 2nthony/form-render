@@ -1,13 +1,13 @@
-declare type Props = {
+export declare type Props = {
   [prop: string]: any
 }
 
-declare type Options = {
+export declare type Options = {
   value: any
   label?: string
 }
 
-declare type Item = {
+export declare type Item = {
   /**
    * Value model
    */
