@@ -1,3 +1,5 @@
+import { Component as VueComponent } from 'vue'
+
 export declare type Props = {
   [prop: string]: any
 }
@@ -17,12 +19,9 @@ export declare type Item = {
    */
   label?: string
   /**
-   * Mapping component
-   *
-   * e.g.
-   * `type: 'text'` = `<input>`
+   * Render custom component, HTML element or map built-in component
    */
-  type?: string
+  component?: VueComponent | HTMLElementTagNameMap | string
   /**
    * Form item default value
    */
