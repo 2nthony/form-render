@@ -57,6 +57,18 @@ export default config
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
+## Credits
+
+This repo(form-renderer) won't exist without the inspirations from following projects or articles:
+
+- Form-renderer itself
+- [@femessage/el-form-renderer](https://github.com/femessage/el-form-renderer)
+- [elv-form](https://github.com/evillt/elv-form)
+- [NoForm](https://github.com/alibaba/nopage/tree/master/packages/form) and [Article](https://zhuanlan.zhihu.com/p/44120143?utm_source=wechat_timeline&utm_medium=social&from=timeline)
+- [再也不想写表单了](https://zhuanlan.zhihu.com/p/48241645)
+- [Form 表单组件设计之路](https://zhuanlan.zhihu.com/p/56280821)
+- [ncform](https://github.com/ncform/ncform)
+
 ## Author
 
 **form-renderer** © [EVILLT](https://github.com/evillt), Released under the [MIT](./LICENSE) License.
