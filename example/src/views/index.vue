@@ -23,12 +23,12 @@ export default {
           {
             model: 'name',
             label: 'Activity name',
-            type: 'text'
+            component: 'text'
           },
           {
             model: 'zone',
             label: 'Activity zone',
-            type: 'select',
+            component: 'select',
             options: [
               {
                 label: 'GuangZhou',
@@ -46,18 +46,18 @@ export default {
           {
             model: 'time',
             label: 'Activity time',
-            type: 'date'
+            component: 'date'
           },
           {
             model: 'delivery',
             label: 'Instant delivery',
-            type: 'switch'
+            component: 'switch'
           },
           {
             model: 'type',
             label: 'Activity type',
             value: [],
-            type: 'checkbox',
+            component: 'checkbox',
             options: [
               {
                 label: 'Online activities'
@@ -76,7 +76,7 @@ export default {
           {
             model: 'resource',
             label: 'Resources',
-            type: 'radio',
+            component: 'radio',
             options: [
               {
                 label: 'Sponsor'
@@ -89,7 +89,7 @@ export default {
           {
             model: 'desc',
             label: 'Activity form',
-            type: 'textarea'
+            component: 'textarea'
           }
         ]
       }
