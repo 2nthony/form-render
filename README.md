@@ -7,6 +7,20 @@
 [![License](https://badgen.net/npm/license/form-renderer)](./LICENSE)
 [![buy me a coffee](https://badgen.net/badge/buy%20me%20a/coffee/a71)](https://patreon.com/evillt)
 
+## Getting started
+
+You might want to run the `example` to see what it can do
+
+```bash
+# We assume that you have already installed the required dependencies.
+
+# Build library
+yarn build
+
+# Run example
+yarn example
+```
+
 ## Contributing
 
 1. Fork it!
