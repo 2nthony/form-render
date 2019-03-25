@@ -10,6 +10,10 @@ class Store {
     })
   }
 
+  updateForm(val) {
+    this.value = Object.assign({}, this.value, val)
+  }
+
   getValue(model) {
     if (model) return this.value[model]
     return { ...this.value }
