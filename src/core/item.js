@@ -1,3 +1,4 @@
+import { warning } from '../utils'
 import store from './store'
 
 export default {
@@ -45,6 +46,12 @@ export default {
 
   mounted() {
     const { item } = this
+
+    if (!item.model) {
+      warning('Missing required prop: `model`', { ...item })
+      return
+    }
+
     if (item.value) {
       store.updateValue(item.model, item.value)
     }
