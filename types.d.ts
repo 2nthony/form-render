@@ -75,6 +75,9 @@ export declare type Item = {
 }
 
 export interface Config {
+  /**
+   * Form props options
+   */
   props?: Props
   /**
    * To render form items
