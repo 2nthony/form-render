@@ -13,26 +13,37 @@ export default {
 
     return (
       <Item.component label={item.label}>
-        <Widget.component
-          {...{
-            props: Object.assign({}, Widget.props, item.props)
-          }}
-          onInput={value => store.updateValue(item.model, value)}
-          value={store.value[item.model]}
-        >
-          {Array.isArray(item.options) &&
-            Widget.option &&
-            item.options.map(opt => {
-              return (
-                <Widget.option.component
-                  label={opt.label || opt.value}
-                  value={opt.value}
-                >
-                  {opt.label}
-                </Widget.option.component>
-              )
-            })}
-        </Widget.component>
+        {item.status === 'preview' ? (
+          <span style="color: #606266;">
+            {Widget.option && item.options
+              ? item.options.map(
+                  i => i.value === store.value[item.model] && i.label
+                )
+              : store.value[item.model]}
+          </span>
+        ) : (
+          <Widget.component
+            {...{
+              props: Object.assign({}, Widget.props, item.props)
+            }}
+            onInput={value => store.updateValue(item.model, value)}
+            value={store.value[item.model]}
+            disabled={item.status === 'disabled'}
+          >
+            {Array.isArray(item.options) &&
+              Widget.option &&
+              item.options.map(opt => {
+                return (
+                  <Widget.option.component
+                    label={opt.label || opt.value}
+                    value={opt.value}
+                  >
+                    {opt.label}
+                  </Widget.option.component>
+                )
+              })}
+          </Widget.component>
+        )}
       </Item.component>
     )
   },
