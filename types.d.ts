@@ -1,5 +1,9 @@
 import { Component as VueComponent } from 'vue'
 
+export declare type Value = {
+  [key: string]: any
+}
+
 export declare type Props = {
   [prop: string]: any
 }
@@ -10,7 +14,7 @@ export declare type Options = {
 }
 
 export declare type EnableWhen = {
-  [k: string]: any
+  [key: string]: any
 }
 
 export declare type Item = {
