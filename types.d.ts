@@ -9,6 +9,10 @@ export declare type Options = {
   label?: string
 }
 
+export declare type EnableWhen = {
+  [k: string]: any
+}
+
 export declare type Item = {
   /**
    * Value model
@@ -37,6 +41,37 @@ export declare type Item = {
    * `select` `radio` `checkbox` ...
    */
   options?: Options[]
+
+  /**
+   * Form item status
+   *
+   * @default `edit`
+   */
+  status?: 'preview' | 'edit' | 'disabled'
+
+  /**
+   * This function will trigger when current form item value changed
+   *
+   * @param `model`
+   * Current form item model
+   *
+   * @param `value`
+   * Current form item value
+   *
+   * ```js
+   * {
+   *   atChange: (model, value) => {
+   *     // do something right
+   *   }
+   * }
+   * ```
+   */
+  atChange?: (model: string, value: any) => void
+
+  /**
+   * Show current form item when condition established
+   */
+  enableWhen?: EnableWhen | string
 }
 
 export interface Config {
