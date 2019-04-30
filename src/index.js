@@ -6,7 +6,7 @@ Form.install = (Vue, { ui } = {}) => {
 
   Vue.mixin({
     computed: {
-      $FormRendererUI() {
+      $FormRenderUI() {
         return ui
       }
     }

@@ -1,15 +1,17 @@
 <template>
   <div class="">
-    <FormRenderer :config="config">
+    <FormRender :config="config">
       <el-form-item>
-        <el-button type="primary">Create</el-button>
+        <el-button type="primary" @click="setValue">Set Value</el-button>
+        <el-button type="primary" @click="printVal">Print Value</el-button>
         <el-button>Cancel</el-button>
       </el-form-item>
-    </FormRenderer>
+    </FormRender>
   </div>
 </template>
 
 <script>
+import { store } from '../../../dist/form-render.cjs'
 export default {
   name: 'Basic',
 
@@ -93,6 +95,17 @@ export default {
           }
         ]
       }
+    }
+  },
+
+  methods: {
+    setValue() {
+      store.updateValue({
+        name: 'evillt'
+      })
+    },
+    printVal() {
+      console.log(store.getValue())
     }
   }
 }

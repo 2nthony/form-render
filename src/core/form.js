@@ -2,11 +2,11 @@ import store from './store'
 import Item from './item'
 
 export default {
-  name: 'FormRenderer',
+  name: 'FormRender',
 
   render(h) {
     const {
-      $FormRendererUI: { form: Form }
+      $FormRenderUI: { form: Form }
     } = this
     const { props, items = [] } = this.config
 

@@ -1,18 +1,18 @@
 {
-  "name": "form-renderer",
+  "name": "form-render",
   "description": "Yet another form render solution for vue",
   "version": "0.0.0",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "evillt/form-renderer"
+    "url": "evillt/form-render"
   },
   "author": "evillt <ijoec123@gmail.com> (https://evila.me)",
   "files": [
     "dist",
     "lib"
   ],
-  "main": "dist/form-renderer.cjs.js",
+  "main": "dist/form-render.cjs.js",
   "types": "types.d.ts",
   "scripts": {
     "lint": "xo",

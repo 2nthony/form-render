@@ -2,12 +2,12 @@ import { warning } from '../utils'
 import store from './store'
 
 export default {
-  name: 'FormRendererItem',
+  name: 'FormRenderItem',
 
   render(h) {
-    const { item, $FormRendererUI } = this
-    const Item = $FormRendererUI.item || {}
-    const Widget = $FormRendererUI[item.component] || {
+    const { item, $FormRenderUI } = this
+    const Item = $FormRenderUI.item || {}
+    const Widget = $FormRenderUI[item.component] || {
       component: item.component
     }
 
