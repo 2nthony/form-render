@@ -4,13 +4,7 @@ class Store {
     this.options = {}
   }
 
-  updateValue(model, val) {
-    this.value = Object.assign({}, this.value, {
-      [model]: val
-    })
-  }
-
-  updateForm(val) {
+  updateValue(val) {
     this.value = Object.assign({}, this.value, val)
   }
 

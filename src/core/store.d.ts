@@ -6,9 +6,7 @@ declare class Store {
     [key: string]: Options
   }
 
-  updateValue(model: string, val: any): void
-
-  updateForm(val: object): void
+  updateValue(val: object): void
 
   getValue(model?: string): object | any
 

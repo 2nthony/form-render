@@ -26,7 +26,7 @@ export default {
             {...{
               props: Object.assign({}, Widget.props, item.props)
             }}
-            onInput={value => store.updateValue(item.model, value)}
+            onInput={value => store.updateValue({ [item.model]: value })}
             value={store.value[item.model]}
             disabled={item.status === 'disabled'}
           >
@@ -64,7 +64,7 @@ export default {
     }
 
     if (item.value) {
-      store.updateValue(item.model, item.value)
+      store.updateValue({ [item.model]: item.value })
     }
   }
 }
